@@ -1,6 +1,6 @@
 public with sharing class MovieSearcherController {
     @AuraEnabled
-    public static String searchMovies(String searchTerm) {
+    public static List<MovieWrapper> searchMovies(String searchTerm) {
         Http http = new Http();
         String url = '&t= '+searchTerm;
 
@@ -11,12 +11,9 @@ public with sharing class MovieSearcherController {
 
         HttpResponse response = http.send(request);
 
-        List<MovieWrapper> movies = new List<MovieWrapper>();
-
         if(response.getStatusCode() == 200) {
-            /*for(MovieWrapper m :MovieWrapper.parse(response.getBody()){
-                movies.add(m);
-            }*/
+            List<MovieWrapper> movies = new List<MovieWrapper>();
+            movies = (List<MovieWrapper>) JSON.deserialize(response.getBody(), MovieWrapper.class);
         }
 
         return null;
@@ -53,9 +50,5 @@ public with sharing class MovieSearcherController {
 	public class cls_Ratings {
 		public String Source;	//Internet Movie Database
 		public String Value;	//9.1/10
-	}
-
-	public static MovieWrapper parse(String json){
-		return (MovieWrapper) System.JSON.deserialize(json, MovieWrapper.class);
 	}
 }
