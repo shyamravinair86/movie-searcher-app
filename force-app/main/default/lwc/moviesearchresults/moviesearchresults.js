@@ -3,16 +3,17 @@ import getMovies from '@salesforce/apex/MovieSearcherController.searchMovies';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class Moviesearchresults extends LightningElement {
-    @api movieSearchText;
+    @api moviesearchtext;
     @track movies;
 
-    @wire(getMovies, {searchTerm: '$movieSearchText'}) 
-    movies({data, error}) {
+    @wire(getMovies, {searchTerm: '$moviesearchtext'}) 
+    wiredMovies({data, error}) {
+        console.log('movie ', data);
         if(data) {
             this.movies = data;
         }
         else if(error) {
-            this.showToast('Cars Not Found', error.body.message, 'error');
+            this.showToast('Movies not found!!', error.body.message, 'error');
         }
     }
 

@@ -1,0 +1,12 @@
+<template>
+    <a onclick={handleMovieSelected}>
+        <div class={isMovieSelected}>
+            <img src={movie.Poster} class="movie slds-align_absolute-center" />
+            <div>
+                <p class="title slds-align_absolute-center">
+                    {movie.Title}
+                </p>
+            </div>
+        </div>
+    </a>
+</template>

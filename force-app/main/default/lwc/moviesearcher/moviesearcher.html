@@ -1,12 +1,12 @@
 <template>
     <div class="slds-m-bottom_small">
         <lightning-card title="Search Movies">
-            <c-moviesearchform onoviesearchentered={handleMovieSearchText}></c-moviesearchform>
+            <c-moviesearchform onmoviesearchentered={handleMovieSearchText}></c-moviesearchform>
         </lightning-card>
     </div>
     <div class="slds-m-vertical-small">
         <lightning-card title="Movie Results">
-            <c-moviesearchresults movie-search-text={movieSearchText}></c-moviesearchresults>
+            <c-moviesearchresults moviesearchtext={movieSearchText}></c-moviesearchresults>
         </lightning-card>
     </div>
 </template>

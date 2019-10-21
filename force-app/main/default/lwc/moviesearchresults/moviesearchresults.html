@@ -2,12 +2,11 @@
     <lightning-layout multiple-rows horizontal-align="center">
         <template if:true={moviesFound}>
             <template for:each={movies} for:item="movie">
-                <lightning-layout-item key={car.Id} padding="around-small" size="12"
+                <lightning-layout-item key={movie.imdbID} padding="around-small" size="12"
                 small-device-size="6" large-device-size="3" medium-device-size="4">
-                    <!-- include movie tile here-->
+                    <c-movietile movie={movie} ></c-movietile>
                 </lightning-layout-item>
             </template>
-            
         </template>
         <template if:false={moviesFound}>
             <div class="slds-align_absolute-center">

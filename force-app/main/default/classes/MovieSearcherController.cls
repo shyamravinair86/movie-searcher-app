@@ -1,22 +1,24 @@
 public with sharing class MovieSearcherController {
-    @AuraEnabled
+    @AuraEnabled(cacheable=true)
     public static List<MovieWrapper> searchMovies(String searchTerm) {
-        Http http = new Http();
-        String url = '&t= '+searchTerm;
+        List<MovieWrapper> movies = new List<MovieWrapper>();
+        if(String.isEmpty(searchTerm)){
+            Http http = new Http();
+            String url = '&t= '+searchTerm;
 
-        HttpRequest request = new HttpRequest();
-        request.setEndpoint('callout:OMDB_API'+url);
-        request.setHeader('Content-Type', 'application/json');
-        request.setMethod('GET');
+            HttpRequest request = new HttpRequest();
+            //request.setEndpoint('callout:OMDB_API'+url);
+            request.setEndpoint('http://www.omdbapi.com/?apikey=4fe98cb1'+url);
+            request.setHeader('Content-Type', 'application/json');
+            request.setMethod('GET');
 
-        HttpResponse response = http.send(request);
+            HttpResponse response = http.send(request);
 
-        if(response.getStatusCode() == 200) {
-            List<MovieWrapper> movies = new List<MovieWrapper>();
-            movies = (List<MovieWrapper>) JSON.deserialize(response.getBody(), MovieWrapper.class);
+            if(response.getStatusCode() == 200) {
+                movies = (List<MovieWrapper>) JSON.deserialize(response.getBody(), MovieWrapper.class);
+            }
         }
-
-        return null;
+        return movies;
     } 
 
     public class MovieWrapper{
