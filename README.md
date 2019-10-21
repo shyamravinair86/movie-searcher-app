@@ -3,7 +3,7 @@ Movie-Searcher is an application that will help you to search movies online and 
 ## Table of contents
 - [Installation Instructions](#installation-instruction)
 
-- [Applicaition Walkthrough](#application-walkthrough)
+- [Application Walkthrough](#application-walkthrough)
 
 ## Installation Instructions
 
