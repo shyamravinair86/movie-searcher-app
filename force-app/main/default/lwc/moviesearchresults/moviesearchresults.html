@@ -1,0 +1,12 @@
+<template>
+    <lightning-layout multiple-rows horizontal-align="center">
+        <template if:true={moviesFound}>
+            
+        </template>
+        <template if:false={moviesFound}>
+            <div class="slds-align_absolute-center">
+                No Movies Found. Please enter a movie name above the screen.
+            </div>
+        </template>
+    </lightning-layout>
+</template>
