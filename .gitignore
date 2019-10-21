@@ -29,3 +29,6 @@ $RECYCLE.BIN/
 
 # Local Dev Server
 .localdevserver
+
+# Profiles folder
+force-app/main/default/profiles
