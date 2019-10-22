@@ -1,0 +1,8 @@
+<template>
+    <template if:true={movieFound}>
+        <p>{movie.Title}</p>
+    </template>
+    <template if:false={movieFound}>
+        <p>Movie Not Found.</p>
+    </template>
+</template>

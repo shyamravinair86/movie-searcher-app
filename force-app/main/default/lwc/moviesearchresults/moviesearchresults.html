@@ -4,7 +4,7 @@
             <template for:each={movies.Search_Z} for:item="movie">
                 <lightning-layout-item key={movie.imdbID} padding="around-small" size="12"
                 small-device-size="6" large-device-size="3" medium-device-size="4">
-                    <c-movietile movie={movie} ></c-movietile>
+                    <c-movietile movie={movie} onmovieselect={handleMovieSelect} selectedmovieid={movieselectedid}></c-movietile>
                 </lightning-layout-item>
             </template>
         </template>

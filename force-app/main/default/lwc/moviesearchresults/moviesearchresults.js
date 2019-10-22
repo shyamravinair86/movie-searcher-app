@@ -5,6 +5,7 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 export default class Moviesearchresults extends LightningElement {
     @api moviesearchtext;
     @track movies;
+    @track movieselectedid;
 
     @wire(getMovies, {searchTerm: '$moviesearchtext'}) 
     wiredMovies({data, error}) {
@@ -14,6 +15,10 @@ export default class Moviesearchresults extends LightningElement {
         else if(error) {
             this.showToast('Movies not found!!', error.body.message, 'error');
         }
+    }
+
+    handleMovieSelect(event) {
+        this.movieselectedid = event.detail;
     }
 
     showToast(title, message, variant){
