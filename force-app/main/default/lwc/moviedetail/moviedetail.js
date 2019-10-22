@@ -2,7 +2,13 @@ import { LightningElement, track, wire } from 'lwc';
 import { registerListener, unregisterAllListeners} from 'c/pubsub';
 import { CurrentPageReference } from 'lightning/navigation';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import { createRecord } from 'lightning/uiRecordApi';
 import getMovie from '@salesforce/apex/MovieSearcherController.searchMovie';
+import FAVOURITE_MOVIE_OBJ from '@salesforce/schema/My_Favourite_Movie__c';
+import MOVIE_NAME from '@salesforce/schema/My_Favourite_Movie__c.Movie_Name__c';
+import MOVIE_POSTER from '@salesforce/schema/My_Favourite_Movie__c.Poster__c';
+import MOVIE_ACTOR from '@salesforce/schema/My_Favourite_Movie__c.Actors__c';
+import MOVIE_PLOT from '@salesforce/schema/My_Favourite_Movie__c.Plot__c';
 
 export default class Moviedetail extends LightningElement {
 
@@ -19,6 +25,22 @@ export default class Moviedetail extends LightningElement {
         }else if(error) {
             this.showToast('Movie not found!!', error.body.message, 'error');
         }
+    }
+
+    addToFavourite() {
+        const fields = {};
+        fields[MOVIE_NAME.fieldApiName] = this.movie.Title;
+        fields[MOVIE_POSTER.fieldApiName] = this.movie.Poster;
+        fields[MOVIE_ACTOR.fieldApiName] = this.movie.Actors;
+        fields[MOVIE_PLOT.fieldApiName] = this.movie.Plot;
+        const recordInput = { apiName: FAVOURITE_MOVIE_OBJ.objectApiName, fields };
+        createRecord(recordInput)
+            .then(favourite => {
+                this.showToast('SUCCESS', 'Added as favourite.', 'success');
+            })
+            .catch(error => {
+                this.showToast('ERROR', error.body.message, 'error');
+            });
     }
 
     connectedCallback() {

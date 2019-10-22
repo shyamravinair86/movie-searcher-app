@@ -1,8 +1,38 @@
 <template>
     <template if:true={movieFound}>
-        <p>{movie.Title}</p>
-    </template>
-    <template if:false={movieFound}>
-        <p>Movie Not Found.</p>
+        <lightning-card title={movie.Title}>
+            <div slot="actions">
+                <lightning-button label="Add To Favourite" onclick={addToFavourite}></lightning-button>
+            </div>
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="12" small-device-size="6" medium-device-size="6" large-device-size="6">
+                    <div class="slds-p-horizontal_small">
+                        <div class="movieproperty">
+                            <span class="label">Director</span>
+                            <lightning-formatted-text value={movie.Director}></lightning-formatted-text>
+                        </div>
+                        <div class="movieproperty">
+                                <span class="Actors">Actors</span>
+                                <lightning-formatted-text value={movie.Actors}></lightning-formatted-text>
+                            </div>
+                        <div class="movieproperty">
+                            <span class="label">Plot</span>
+                            <lightning-formatted-text value={movie.Plot}></lightning-formatted-text>
+                        </div>
+                        <div class="movieproperty">
+                            <span class="label">Released</span>
+                            <lightning-formatted-text value={movie.Released}></lightning-formatted-text>
+                        </div>
+                        <div class="movieproperty">
+                            <span class="label">Production</span>
+                            <lightning-formatted-text value={movie.Production}></lightning-formatted-text>
+                        </div>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" small-device-size="6" medium-device-size="6" large-device-size="6">
+                    <img src={movie.Poster} class="movie slds-align_absolute-center" alt="Movie Poster" />
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card>
     </template>
 </template>

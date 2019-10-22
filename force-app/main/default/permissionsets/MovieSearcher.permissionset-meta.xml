@@ -11,7 +11,17 @@
     <description>Permission Set used to get access to Movie Searcher App.</description>
     <fieldPermissions>
         <editable>true</editable>
+        <field>My_Favourite_Movie__c.Actors__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>My_Favourite_Movie__c.Movie_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>My_Favourite_Movie__c.Plot__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

@@ -6,7 +6,6 @@ public with sharing class MovieSearcherController {
         if(!String.isEmpty(searchTerm)){
             String url = System.Label.OMDB_API_URL+'&s='+searchTerm;
             HttpResponse response = httpRetriever(url);
-            System.debug('response--> '+response.getBody());
             if(response.getStatusCode() == 200) {
                 movies = MovieResultsParser.parse(response.getBody());
             }
@@ -20,7 +19,6 @@ public with sharing class MovieSearcherController {
         if(!String.isEmpty(movieId)) {
             String url = System.Label.OMDB_API_URL+'&i='+movieId;
             HttpResponse response = httpRetriever(url);
-            System.debug('response--> '+response.getBody());
             if(response.getStatusCode() == 200) {
                 movie = MovieResultParser.parse(response.getBody());
             }
@@ -33,7 +31,6 @@ public with sharing class MovieSearcherController {
         Http http = new Http();
         HttpRequest request = new HttpRequest();
         request.setEndpoint(URL);
-        System.debug('url->'+request.getEndpoint());
         request.setMethod('GET');
         HttpResponse response = http.send(request);
         return response;
