@@ -23,8 +23,12 @@ public with sharing class MovieSearcherController {
                 movie = MovieResultParser.parse(response.getBody());
             }
         }
-        System.debug('movie--> '+movie);
         return movie;
+    }
+
+    @AuraEnabled(cacheable=true)
+    public static List<My_Favourite_Movie__c> getFavourites() {
+        return [SELECT Actors__c, Movie_Name__c, Poster__c FROM My_Favourite_Movie__c WHERE OwnerId = :UserInfo.getUserId()];
     }
 
     private static HttpResponse httpRetriever(String URL) {
