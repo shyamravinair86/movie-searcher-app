@@ -1,8 +1,8 @@
 import { LightningElement, track } from 'lwc';
 
 export default class Moviesearcher extends LightningElement {
-    @track movieSearchText = '';
+    @track searchtext = '';
     handleMovieSearchText(event) {
-        this.movieSearchText = event.detail;
+        this.searchtext = event.detail;
     }
 }

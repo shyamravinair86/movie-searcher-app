@@ -9,7 +9,7 @@ a {
 }
 
 img.movie {
-    height: 120px;
+    height: 250px;
     max-width: initial;
     pointer-events: none;
 }

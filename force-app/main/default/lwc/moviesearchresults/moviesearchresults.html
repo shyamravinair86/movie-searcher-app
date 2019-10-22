@@ -1,7 +1,7 @@
 <template>
     <lightning-layout multiple-rows horizontal-align="center">
         <template if:true={moviesFound}>
-            <template for:each={movies} for:item="movie">
+            <template for:each={movies.Search_Z} for:item="movie">
                 <lightning-layout-item key={movie.imdbID} padding="around-small" size="12"
                 small-device-size="6" large-device-size="3" medium-device-size="4">
                     <c-movietile movie={movie} ></c-movietile>

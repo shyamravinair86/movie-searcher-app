@@ -8,7 +8,6 @@ export default class Moviesearchresults extends LightningElement {
 
     @wire(getMovies, {searchTerm: '$moviesearchtext'}) 
     wiredMovies({data, error}) {
-        console.log('movie ', data);
         if(data) {
             this.movies = data;
         }
