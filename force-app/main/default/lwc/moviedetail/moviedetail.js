@@ -1,8 +1,8 @@
 import { LightningElement, track, wire } from 'lwc';
 import { registerListener, unregisterAllListeners} from 'c/pubsub';
-import { CurrentPageReference } from 'lightning/navigation';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { createRecord } from 'lightning/uiRecordApi';
+import { CurrentPageReference } from 'lightning/navigation';
 import getMovie from '@salesforce/apex/MovieSearcherController.searchMovie';
 import FAVOURITE_MOVIE_OBJ from '@salesforce/schema/My_Favourite_Movie__c';
 import MOVIE_NAME from '@salesforce/schema/My_Favourite_Movie__c.Movie_Name__c';

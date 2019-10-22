@@ -1,0 +1,13 @@
+<template>
+    <template if:true={hasFavourites}>
+        <lightning-card title="My Favourite Movies" >
+            <ul>
+                <template for:each={favouritemovies} for:item="fav">
+                    <li key={fav.Id} style="padding: 10px">
+                        {fav.Movie_Name__c}
+                    </li> 
+                </template>
+            </ul>
+        </lightning-card>
+    </template>
+</template>
