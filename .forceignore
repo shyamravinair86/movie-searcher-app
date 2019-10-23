@@ -13,3 +13,6 @@ package.xml
 
 # profiles
 **/profiles
+
+# jest test folders
+**/__tests__/**

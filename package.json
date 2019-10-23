@@ -1,0 +1,25 @@
+{
+  "name": "movie-search-app",
+  "version": "1.0.0",
+  "description": "![movie-searcher-logo](preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:unit": "sfdx-lwc-jest",
+    "test:unit:watch": "sfdx-lwc-jest --watch",
+    "test:unit:debug": "sfdx-lwc-jest --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shyamravinair86/movie-searcher-app.git"
+  },
+  "author": "Shyam Nair",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shyamravinair86/movie-searcher-app/issues"
+  },
+  "homepage": "https://github.com/shyamravinair86/movie-searcher-app#readme",
+  "devDependencies": {
+    "@salesforce/sfdx-lwc-jest": "^0.6.1"
+  }
+}
