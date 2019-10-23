@@ -2,12 +2,22 @@
 
 Movie-Searcher is an application that will help you to search movies online and add them as your favourites in Salesforce. The application is built using Lightning Web Components.
 
-## Table of contents
+## Table of Contents
 - [Installation Instructions](#installation-instruction)
 
 - [Application Walkthrough](#application-walkthrough)
 
 ## Installation Instructions
+1. Se up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/en/content/learn/projects/quick-start-lightning-web-components) Trailhead project. The steps include:
+- Enable Dev Hub in your Trailhead Playground
+- Install [Salesforce CLI](https://developer.salesforce.com/tools/sfdxcli)
+- Install [Visual Studio Code](https://code.visualstudio.com/)
+- Install the [Salesforce Extension Pack](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode) for Visual Studio Code.
+2. Authenticate to your hub org and provide it with an alias as shown below:
+```
+sfdx force:auth:web:login -d -a myhuborg
+```
+
 
 
 ## Application Walkthrough
