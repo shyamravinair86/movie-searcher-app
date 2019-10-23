@@ -17,6 +17,23 @@ Movie-Searcher is an application that will help you to search movies online and 
 ```
 sfdx force:auth:web:login -d -a myhuborg
 ```
+3. Clone the movie-searcher-app repository:
+```
+git clone https://github.com/shyamravinair86/movie-searcher-app.git
+git cd movie-searcher-app
+```
+4. Create a scratch org and provide it with an alias:
+```
+sfdx force:org:create -s -f config/project-scratch-def.json -a movie-searcher-app
+```
+5. Push the app to your scratch org:
+```
+sfdx force:source:push
+6. Assign the MovieSearcher permission set to the default user:
+```
+sfdx force:user:permset:assign -n MovieSearcher
+```
+7. Open the scratch org.
 
 
 
