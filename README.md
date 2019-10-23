@@ -29,12 +29,12 @@ sfdx force:org:create -s -f config/project-scratch-def.json -a movie-searcher-ap
 5. Push the app to your scratch org:
 ```
 sfdx force:source:push
+```
 6. Assign the MovieSearcher permission set to the default user:
 ```
 sfdx force:user:permset:assign -n MovieSearcher
 ```
 7. Open the scratch org.
-
 
 
 ## Application Walkthrough
