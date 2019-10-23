@@ -3,12 +3,17 @@
 Movie-Searcher is an application that will help you to search movies online and add them as your favourites in Salesforce. The application is built using Lightning Web Components.
 
 ## Table of Contents
+- [Generate API Key for OMDb API](#generate-api-key-for-omdb-api)
 - [Installation Instructions](#installation-instruction)
+- [Post Installation Instructions](#post-installation-instructions)
 
-- [Application Walkthrough](#application-walkthrough)
+## Generate API Key for OMDb API
+1. Go to [OMDb API website](http://www.omdbapi.com) and familiarise with the api.
+2. Click on API Key tab, select FREE as Account Type and your email address and click Submit.
+3. Check your inbox for the api key.
 
 ## Installation Instructions
-1. Se up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/en/content/learn/projects/quick-start-lightning-web-components) Trailhead project. The steps include:
+1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/en/content/learn/projects/quick-start-lightning-web-components) Trailhead project. The steps include:
 - Enable Dev Hub in your Trailhead Playground
 - Install [Salesforce CLI](https://developer.salesforce.com/tools/sfdxcli)
 - Install [Visual Studio Code](https://code.visualstudio.com/)
@@ -44,4 +49,17 @@ sfdx force:org:open
 ```
 
 
-## Application Walkthrough
+## Post Installation Instructions
+1. In your project directory, go to force-app/main/default/labels and update the value for the custom label. Replace <enter your api key> with your api key.
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>OMDB_API_URL</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>OMDB_API_URL</shortDescription>
+        <value>http://www.omdbapi.com/?apikey=<enter your api key here></value>
+    </labels>
+</CustomLabels>
+```
