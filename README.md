@@ -50,7 +50,7 @@ sfdx force:org:open
 
 
 ## Post Installation Instructions
-1. In your project directory, go to force-app/main/default/labels and update the value for the custom label. Replace ```<enter your api key>``` with your api key.
+In your project directory, go to force-app/main/default/labels and update the value for the custom label. Replace ```<enter your api key>``` with your api key.
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
