@@ -4,7 +4,7 @@ Movie-Searcher is an application that will help you to search movies online and 
 
 ## Table of Contents
 - [Generate API Key for OMDb API](#generate-api-key-for-omdb-api)
-- [Installation Instructions](#installation-instruction)
+- [Installation Instructions](#installation-instructions)
 - [Post Installation Instructions](#post-installation-instructions)
 
 ## Generate API Key for OMDb API
