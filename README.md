@@ -34,7 +34,14 @@ sfdx force:source:push
 ```
 sfdx force:user:permset:assign -n MovieSearcher
 ```
-7. Open the scratch org.
+7. Export sample data to your dev hub:
+```
+sfdx force:data:tree:import --sobjecttreefiles data/My_Favourite_Movie__c.json
+``` 
+8. Open the scratch org:
+```
+sfdx force:org:open
+```
 
 
 ## Application Walkthrough

@@ -1,0 +1,64 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "My_Favourite_Movie__c",
+                "referenceId": "My_Favourite_Movie__cRef1"
+            },
+            "Actors__c": "Michael Keaton, Danny DeVito, Michelle Pfeiffer, Christopher Walken",
+            "Movie_Name__c": "Batman Returns",
+            "Plot__c": "Batman returns to the big screen when a deformed man calling himself the Penguin wreaks havoc across Gotham with the help of a cruel businessman.",
+            "Poster__c": "https://m.media-amazon.com/images/M/MV5BOGZmYzVkMmItM2NiOS00MDI3LWI4ZWQtMTg0YWZkODRkMmViXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_SX300.jpg"
+        },
+        {
+            "attributes": {
+                "type": "My_Favourite_Movie__c",
+                "referenceId": "My_Favourite_Movie__cRef2"
+            },
+            "Actors__c": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+            "Movie_Name__c": "Batman Begins",
+            "Plot__c": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.",
+            "Poster__c": "https://m.media-amazon.com/images/M/MV5BZmUwNGU2ZmItMmRiNC00MjhlLTg5YWUtODMyNzkxODYzMmZlXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"
+        },
+        {
+            "attributes": {
+                "type": "My_Favourite_Movie__c",
+                "referenceId": "My_Favourite_Movie__cRef3"
+            },
+            "Actors__c": "Sandra Bullock, Ryan Reynolds, Mary Steenburgen, Craig T. Nelson",
+            "Movie_Name__c": "The Proposal",
+            "Plot__c": "A pushy boss forces her young assistant to marry her in order to keep her visa status in the U.S. and avoid deportation to Canada.",
+            "Poster__c": "https://m.media-amazon.com/images/M/MV5BOGM5YTNiYzktNmEwZC00ZjE5LWIyNzEtOTUwNDE0NmVkYzE3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+        },
+        {
+            "attributes": {
+                "type": "My_Favourite_Movie__c",
+                "referenceId": "My_Favourite_Movie__cRef4"
+            },
+            "Actors__c": "Joaquin Phoenix, Robert De Niro, Zazie Beetz, Frances Conroy",
+            "Movie_Name__c": "Joker",
+            "Plot__c": "A gritty character study of Arthur Fleck, a man disregarded by society.",
+            "Poster__c": "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
+        },
+        {
+            "attributes": {
+                "type": "My_Favourite_Movie__c",
+                "referenceId": "My_Favourite_Movie__cRef5"
+            },
+            "Actors__c": "Manoj Kumar, Simi Garewal, Achala Sachdev, Rishi Kapoor",
+            "Movie_Name__c": "Mera Naam Joker",
+            "Plot__c": "Raju is a joker, a clown. It is what he is and what he always shall be. As his life story unfolds in three chapters, from his school days to the circus to the streets, he must always make ...",
+            "Poster__c": "https://m.media-amazon.com/images/M/MV5BODM2NDIyNjYyM15BMl5BanBnXkFtZTcwNjA3NDEyMQ@@._V1_SX300.jpg"
+        },
+        {
+            "attributes": {
+                "type": "My_Favourite_Movie__c",
+                "referenceId": "My_Favourite_Movie__cRef6"
+            },
+            "Actors__c": "Gene Hackman, Christopher Reeve, Ned Beatty, Jackie Cooper",
+            "Movie_Name__c": "Superman II",
+            "Plot__c": "Superman agrees to sacrifice his powers to start a relationship with Lois Lane, unaware that three Kryptonian criminals he inadvertently released are conquering Earth.",
+            "Poster__c": "https://m.media-amazon.com/images/M/MV5BMWUzNDJjMDUtNGEzMi00YThlLTlkMmEtNjVlOGQwOWM3MjM3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+        }
+    ]
+}
