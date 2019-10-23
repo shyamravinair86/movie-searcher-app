@@ -50,7 +50,7 @@ sfdx force:org:open
 
 
 ## Post Installation Instructions
-In your project directory, go to force-app/main/default/labels and update the value for the custom label. Replace ```<enter your api key>``` with your api key.
+1. In your project directory, go to force-app/main/default/labels and edit CustomLabels.labels-meta.xml file. Enter the api key after ``=`` in the value attribute:
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
@@ -59,7 +59,11 @@ In your project directory, go to force-app/main/default/labels and update the va
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>OMDB_API_URL</shortDescription>
-        <value>http://www.omdbapi.com/?apikey=<enter your api key here></value>
+        <value>http://www.omdbapi.com/?apikey=</value>
     </labels>
 </CustomLabels>
+```
+2. Run the deploy command to push your changes to the Dev Hub:
+```
+sfdx force:source:push
 ```
