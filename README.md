@@ -1,5 +1,5 @@
 # sfdx-circleci 
-[![CircleCI](https://circleci.com/gh/forcedotcom/sfdx-circleci.svg?style=svg)](https://circleci.com/gh/shyamravinair86/workflows/movie-searcher-app)
+[![CircleCI](https://circleci.com/gh/shyamravinair86/movie-searcher-app.svg?style=svg)](https://circleci.com/gh/shyamravinair86/workflows/movie-searcher-app)
 
 ![movie-searcher-logo](preview.jpg)
 
