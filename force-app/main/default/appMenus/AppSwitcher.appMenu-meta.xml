@@ -64,4 +64,8 @@
         <name>Movie_Searcher</name>
         <type>CustomApplication</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>CircleCI</name>
+        <type>ConnectedApp</type>
+    </appMenuItems>
 </AppMenu>
