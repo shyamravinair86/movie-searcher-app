@@ -32,6 +32,3 @@ $RECYCLE.BIN/
 
 # Profiles folder
 force-app/main/default/profiles
-
-#connected apps
-force-app/main/default/connectedApps
