@@ -64,6 +64,7 @@ jobs:
 ### Uncomment the following if performing deployments
 deployment:
   override:
-    - sfdx force:source:convert -r force-app -d testDeploy
-    - . cleanupDeploy.sh
-    - sfdx force:mdapi:deploy -d testDeploy/ -u deploy -w 2
+    - echo "Converting to MDAPI format..."
+    - sfdx force:source:convert -d deploy_prod -r force-app 
+    - echo "Deploying to production & running all tests..."
+    - sfdx force:mdapi:deploy -u myorg3 -d deploy_prod/ -w -1 -l RunAllTestsInOrg
