@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/shyamravinair86/movie-searcher-app.svg?style=svg)](https://circleci.com/gh/shyamravinair86/movie-searcher-app)
 
-![movie-searcher-logo](preview.jpg)
+![movie-searcher-logo](assets/preview.jpg)
 
 Movie-Searcher is an application that will help you to search movies online and add them as your favourites in Salesforce. The application is built using Lightning Web Components.
 
