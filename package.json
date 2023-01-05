@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/shyamravinair86/movie-searcher-app#readme",
   "devDependencies": {
-    "@salesforce/sfdx-lwc-jest": "^0.6.1"
+    "@salesforce/sfdx-lwc-jest": "^1.2.1"
   }
 }
